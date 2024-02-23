@@ -12,18 +12,27 @@
         tr, td, th{padding: 10px;border-collapse: collapse;border-bottom: 1px solid #056130;}
         tr:hover {background-color: #3e7c49;}
         header {background-color: rgb(20, 80, 20);color: #7f4a4a; padding: 10px;text-align: center;}
-        footer {background-color: rgb(20, 80, 20);color: #7f4a4a; padding: 10px;text-align: center;}
-        .footer-content {display: flex;justify-content: space-between;max-width: 1200px;margin: 0 auto;}
+        .header-content {font-family:Garamond;display: flex;max-width: 1200px;}
+        .header-content p { text-align: center;margin: 0}
+        footer {background-color: rgb(20, 80, 20);color: #4a7f4e; padding: 10px;text-align: center;}
+        .footer-content {font-family:Garamond;display: flex;justify-content: space-between;max-width: 1200px;margin: 0 auto;}
         .footer-content p { margin: 0}
+        .dropdown {position: relative;display: inline-block}
+        .dropdown-content {display: none;position: absolute;background-color: #ffffff;min-width: 160px;box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);padding: 12px 16px;z-index: 1;}
+        .dropdown:hover .dropdown-content {display: block;}
     </style>     
 </head>
 <body>
     <header>
-        <h1>Maiko Okamura</h1>
-        
+        <div class="header-content">
+            <div>
+            <h1>
+                  <p style =  "font-size:20px;font-family:Garamond;color:rgb(218, 203, 157);text-align:center;">Maiko Okamura</p>
+             </h1>
+            </div>
+        </div>
     </header>
 
-    </header>
     <h2>
         <p style="font-size:30px;font-family:Garamond;color:green;text-align:center;"><b>Hi!</b></p>
     </h2>
@@ -39,13 +48,26 @@
         <td>Parks</td>
         <td>Location</td>
         <td>Check</td>
-
     </tr>
     <tr>
         <td>1</td>
         <td>Acadia National Park</td>
         <td>Maine</td>
-        <td>✔</td>
+        <td> 
+            <div class="dropdown">
+            <span>✔</span>
+            <div class="dropdown-content">
+              <p>Date:10/21/2023</p>
+            </div>
+        </div>
+        </td>
+
+        <div class="dropdown">
+            <span></span>
+            <div class="dropdown-content">
+              <p>Hello World!</p>
+            </div>
+        </div>
        
     </tr>
     <tr>
@@ -357,7 +379,14 @@
         <td>63</td>
         <td>Zion National Park</td>
         <td>Utah</td>
-        <td>✔</td>
+        <td> 
+            <div class="dropdown">
+            <span>✔</span>
+            <div class="dropdown-content">
+              <p>Date:7/3/2023</p>
+            </div>
+        </div>
+        </td>
     </tr>
     </table>
 
@@ -378,8 +407,33 @@
         <p style =  "font-size:20px;font-family:Garamond;color:green;text-align:center;"> Thank you for visiting, see you soon!</p>
     </footer>
 
+    <footer>
+        <div class="footer-content">
+          <div>
+            <h3>
+                <p style =  "font-size:20px;font-family:Garamond;color:green;text-align:center;"></p>Contact
+            </h3>
+            <p>Email: mokamura@conncoll.edu</p>
+            <p>Phone: (860)532-3562</p>
+          </div>
+          <div>
+            <h3>Social Media</h3>
+            <p>Follow me on:</p>
+            <p>Twitter | Facebook | Instagram</p>
+          </div>
+          <div>
+            <h3>Links</h3>
+            <p><a href="#">Home</a></p>
+            <p><a href="#">About Us</a></p>
+            <p><a href="#">Contact Us</a></p>
+          </div>
+        </div>
+      </footer>
+
     <!-- 1 new HTML element that we didn’t specifically cover in class is how to write comments in html, it's so intersting 
     that different languages have different way to specify the coommnets. --> 
+
+
 
 </body>
 </html>
